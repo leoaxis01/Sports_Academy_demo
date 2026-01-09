@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Elite Sports Academy | Building Champions</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            scroll-behavior: smooth;
+        }
+        .bg-navy { background-color: #0f172a; }
+        .text-navy { color: #0f172a; }
+        .accent-yellow { color: #facc15; }
+        .bg-accent { background-color: #facc15; }
+        
+        .hero-gradient {
+            background: linear-gradient(rgba(15, 23, 42, 0.8), rgba(15, 23, 42, 0.6));
+        }
+        
+        .nav-sticky {
+            position: sticky;
+            top: 0;
+            z-index: 50;
+            background: rgba(255, 255, 255, 0.98);
+            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+        }
+
+        .program-card {
+            transition: all 0.3s ease;
+            border-bottom: 4px solid transparent;
+        }
+        .program-card:hover {
+            transform: translateY(-5px);
+            border-bottom: 4px solid #facc15;
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1);
+        }
+
+        .stat-item {
+            border-right: 1px solid rgba(255, 255, 255, 0.1);
+        }
+        .stat-item:last-child { border-right: none; }
+    </style>
+</head>
+<body class="bg-slate-50 text-slate-900">
+
+    <!-- Navbar -->
+    <nav class="nav-sticky py-4 px-6 md:px-16 flex justify-between items-center">
+        <div class="flex items-center gap-2">
+            <div class="bg-navy p-1.5 rounded text-white">
+                <i data-lucide="trophy" class="w-6 h-6"></i>
+            </div>
+            <span class="text-xl font-800 tracking-tighter text-navy uppercase">Elite Sports Academy</span>
+        </div>
+        
+        <div class="hidden md:flex space-x-10 items-center text-sm font-bold tracking-wide text-slate-600">
+            <a href="#home" class="hover:text-blue-700 transition-colors uppercase">Home</a>
+            <a href="#programs" class="hover:text-blue-700 transition-colors uppercase">Programs</a>
+            <a href="#coaches" class="hover:text-blue-700 transition-colors uppercase">Coaches</a>
+            <a href="#achievements" class="hover:text-blue-700 transition-colors uppercase">Achievements</a>
+            <a href="#contact" class="bg-navy text-white px-6 py-2.5 rounded-full hover:bg-blue-800 transition-all uppercase text-xs">Enroll Now</a>
+        </div>
+
+        <button class="md:hidden text-navy" id="mobileMenuBtn">
+            <i data-lucide="menu" class="w-6 h-6"></i>
+        </button>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="relative h-[85vh] flex items-center overflow-hidden">
+        <div class="absolute inset-0 z-0">
+            <img 
+                src="https://images.unsplash.com/photo-1526232761682-d26e03ac148e?q=80&w=2000" 
+                alt="Sports Training" 
+                class="w-full h-full object-cover"
+            >
+            <div class="absolute inset-0 hero-gradient"></div>
+        </div>
+        
+        <div class="relative z-10 container mx-auto px-6 md:px-16 text-white">
+            <div class="max-w-3xl">
+                <span class="inline-block bg-accent text-navy px-4 py-1 rounded-sm font-800 text-xs uppercase tracking-widest mb-6">Est. 2010</span>
+                <h1 class="text-5xl md:text-7xl font-800 leading-none mb-6">
+                    Building <span class="text-yellow-400">Champions</span> <br> for Tomorrow
+                </h1>
+                <p class="text-lg md:text-xl text-slate-300 mb-10 max-w-xl leading-relaxed">
+                    Professional, discipline-focused training for young athletes. We don't just teach sports; we build character, leadership, and elite skill sets.
+                </p>
+                <div class="flex flex-col sm:flex-row gap-4">
+                    <a href="#contact" class="bg-accent text-navy px-10 py-4 font-800 text-center hover:bg-white transition-all rounded shadow-lg">
+                        START ENROLLMENT
+                    </a>
+                    <a href="#programs" class="border-2 border-white/30 backdrop-blur-sm text-white px-10 py-4 font-800 text-center hover:bg-white/10 transition-all rounded">
+                        EXPLORE PROGRAMS
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Achievements / Stats -->
+    <section id="achievements" class="bg-navy py-16 px-6">
+        <div class="container mx-auto">
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-8">
+                <div class="stat-item text-center">
+                    <div class="text-4xl md:text-5xl font-800 text-yellow-400 mb-2">50+</div>
+                    <div class="text-xs font-bold text-slate-400 uppercase tracking-widest">State Championships</div>
+                </div>
+                <div class="stat-item text-center">
+                    <div class="text-4xl md:text-5xl font-800 text-yellow-400 mb-2">2500+</div>
+                    <div class="text-xs font-bold text-slate-400 uppercase tracking-widest">Alumni Athletes</div>
+                </div>
+                <div class="stat-item text-center">
+                    <div class="text-4xl md:text-5xl font-800 text-yellow-400 mb-2">15+</div>
+                    <div class="text-xs font-bold text-slate-400 uppercase tracking-widest">Expert Coaches</div>
+                </div>
+                <div class="stat-item text-center">
+                    <div class="text-4xl md:text-5xl font-800 text-yellow-400 mb-2">14</div>
+                    <div class="text-xs font-bold text-slate-400 uppercase tracking-widest">Years Experience</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Training Programs -->
+    <section id="programs" class="py-24 px-6 md:px-16">
+        <div class="container mx-auto">
+            <div class="flex flex-col md:flex-row items-end justify-between mb-16 gap-4">
+                <div class="max-w-2xl">
+                    <h2 class="text-blue-600 font-800 text-sm uppercase tracking-[0.3em] mb-3">Our Curriculum</h2>
+                    <h3 class="text-4xl md:text-5xl font-800 text-navy leading-tight">Training Programs Designed for Success</h3>
+                </div>
+                <p class="text-slate-500 max-w-sm text-sm">Every athlete follows a structured path tailored to their current skill level and long-term potential.</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <!-- Beginner -->
+                <div class="bg-white p-10 rounded-xl program-card">
+                    <div class="w-12 h-12 bg-blue-50 text-blue-600 rounded-lg flex items-center justify-center mb-8">
+                        <i data-lucide="baby" class="w-6 h-6"></i>
+                    </div>
+                    <h4 class="text-2xl font-800 text-navy mb-4">Foundation Level</h4>
+                    <p class="text-slate-500 mb-6 text-sm leading-relaxed">Focuses on motor skills, basic rules, and fostering a genuine love for the sport. Ideal for introducing the basics.</p>
+                    <div class="text-xs font-bold text-blue-600 bg-blue-50 px-3 py-1 rounded inline-block">AGES 6 - 10</div>
+                    <ul class="mt-8 space-y-3 text-sm text-slate-600">
+                        <li class="flex items-center gap-2"><i data-lucide="check-circle" class="w-4 h-4 text-blue-500"></i> Physical Literacy</li>
+                        <li class="flex items-center gap-2"><i data-lucide="check-circle" class="w-4 h-4 text-blue-500"></i> Basic Teamwork</li>
+                        <li class="flex items-center gap-2"><i data-lucide="check-circle" class="w-4 h-4 text-blue-500"></i> Coordination Drills</li>
+                    </ul>
+                </div>
+
+                <!-- Intermediate -->
+                <div class="bg-white p-10 rounded-xl program-card relative">
+                    <div class="absolute top-6 right-6 text-[10px] font-bold bg-navy text-white px-3 py-1 rounded-full uppercase tracking-widest">Popular</div>
+                    <div class="w-12 h-12 bg-blue-50 text-blue-600 rounded-lg flex items-center justify-center mb-8">
+                        <i data-lucide="trending-up" class="w-6 h-6"></i>
+                    </div>
+                    <h4 class="text-2xl font-800 text-navy mb-4">Development Level</h4>
+                    <p class="text-slate-500 mb-6 text-sm leading-relaxed">Transitioning from basics to technical proficiency and tactical awareness. Rigorous and disciplined approach.</p>
+                    <div class="text-xs font-bold text-blue-600 bg-blue-50 px-3 py-1 rounded inline-block">AGES 11 - 15</div>
+                    <ul class="mt-8 space-y-3 text-sm text-slate-600">
+                        <li class="flex items-center gap-2"><i data-lucide="check-circle" class="w-4 h-4 text-blue-500"></i> Technical Drills</li>
+                        <li class="flex items-center gap-2"><i data-lucide="check-circle" class="w-4 h-4 text-blue-500"></i> Mental Conditioning</li>
+                        <li class="flex items-center gap-2"><i data-lucide="check-circle" class="w-4 h-4 text-blue-500"></i> Local Competitions</li>
+                    </ul>
+                </div>
+
+                <!-- Advanced -->
+                <div class="bg-white p-10 rounded-xl program-card">
+                    <div class="w-12 h-12 bg-blue-50 text-blue-600 rounded-lg flex items-center justify-center mb-8">
+                        <i data-lucide="swords" class="w-6 h-6"></i>
+                    </div>
+                    <h4 class="text-2xl font-800 text-navy mb-4">Elite Training</h4>
+                    <p class="text-slate-500 mb-6 text-sm leading-relaxed">High-performance training for athletes preparing for regional and national tournaments. Professional scouting prep.</p>
+                    <div class="text-xs font-bold text-blue-600 bg-blue-50 px-3 py-1 rounded inline-block">AGES 16+</div>
+                    <ul class="mt-8 space-y-3 text-sm text-slate-600">
+                        <li class="flex items-center gap-2"><i data-lucide="check-circle" class="w-4 h-4 text-blue-500"></i> Video Analysis</li>
+                        <li class="flex items-center gap-2"><i data-lucide="check-circle" class="w-4 h-4 text-blue-500"></i> Nutrition Coaching</li>
+                        <li class="flex items-center gap-2"><i data-lucide="check-circle" class="w-4 h-4 text-blue-500"></i> National Circuit</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Coaches Section -->
+    <section id="coaches" class="py-24 bg-white px-6 md:px-16">
+        <div class="container mx-auto">
+            <div class="text-center mb-20">
+                <h2 class="text-4xl font-800 text-navy mb-4">The Minds Behind the Champions</h2>
+                <p class="text-slate-500 max-w-xl mx-auto">Our coaches aren't just trainers; they are mentors with decades of national-level experience.</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+                <div class="group">
+                    <div class="aspect-[3/4] overflow-hidden rounded-lg mb-4 bg-slate-100 relative">
+                        <img src="https://images.unsplash.com/photo-1595152772835-219674b2a8a6?q=80&w=600" alt="Coach" class="w-full h-full object-cover transition-transform group-hover:scale-105">
+                        <div class="absolute bottom-4 left-4 bg-navy text-white px-3 py-1 text-[10px] font-bold uppercase tracking-widest">Head Coach</div>
+                    </div>
+                    <h5 class="text-lg font-800 text-navy">Robert Sterling</h5>
+                    <p class="text-sm text-blue-600 font-bold">Football Specialist</p>
+                    <p class="text-xs text-slate-400 mt-2">15 Years Experience | Former Pro Athlete</p>
+                </div>
+                <div class="group">
+                    <div class="aspect-[3/4] overflow-hidden rounded-lg mb-4 bg-slate-100">
+                        <img src="https://images.unsplash.com/photo-1544005313-94ddf0286df2?q=80&w=600" alt="Coach" class="w-full h-full object-cover transition-transform group-hover:scale-105">
+                    </div>
+                    <h5 class="text-lg font-800 text-navy">Elena Vance</h5>
+                    <p class="text-sm text-blue-600 font-bold">Athletics & Sprints</p>
+                    <p class="text-xs text-slate-400 mt-2">Olympic Qualifier | Master of Biomechanics</p>
+                </div>
+                <div class="group">
+                    <div class="aspect-[3/4] overflow-hidden rounded-lg mb-4 bg-slate-100">
+                        <img src="https://images.unsplash.com/photo-1531427186611-ecfd6d936c79?q=80&w=600" alt="Coach" class="w-full h-full object-cover transition-transform group-hover:scale-105">
+                    </div>
+                    <h5 class="text-lg font-800 text-navy">David Chen</h5>
+                    <p class="text-sm text-blue-600 font-bold">Basketball Coordinator</p>
+                    <p class="text-xs text-slate-400 mt-2">FIBA Certified | Youth Talent Scout</p>
+                </div>
+                <div class="group">
+                    <div class="aspect-[3/4] overflow-hidden rounded-lg mb-4 bg-slate-100">
+                        <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?q=80&w=600" alt="Coach" class="w-full h-full object-cover transition-transform group-hover:scale-105">
+                    </div>
+                    <h5 class="text-lg font-800 text-navy">Marcus Thorne</h5>
+                    <p class="text-sm text-blue-600 font-bold">Tennis Professional</p>
+                    <p class="text-xs text-slate-400 mt-2">ITF Level 3 Coach | Technical Analyst</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials -->
+    <section class="py-24 bg-slate-50 px-6">
+        <div class="container mx-auto">
+            <div class="max-w-4xl mx-auto bg-white rounded-2xl shadow-xl overflow-hidden flex flex-col md:flex-row">
+                <div class="md:w-1/3 bg-navy p-12 text-white flex flex-col justify-center items-center text-center">
+                    <i data-lucide="quote" class="w-12 h-12 text-yellow-400 mb-6 opacity-50"></i>
+                    <h4 class="text-2xl font-800 mb-2">What Parents Say</h4>
+                    <p class="text-slate-400 text-xs uppercase tracking-widest">Our Success Stories</p>
+                </div>
+                <div class="md:w-2/3 p-12 italic text-slate-600 leading-relaxed relative">
+                    <p class="text-lg mb-8">"Enrolling my son at Elite was the best decision for his discipline. He hasn't just improved his football skills; his confidence in school and leadership qualities have soared. The coaches are truly world-class mentors."</p>
+                    <div class="flex items-center gap-4 not-italic">
+                        <div class="w-12 h-12 rounded-full bg-slate-200 overflow-hidden">
+                            <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?q=80&w=200" alt="Parent">
+                        </div>
+                        <div>
+                            <h6 class="font-800 text-navy">Sarah Jenkins</h6>
+                            <p class="text-xs text-slate-400">Parent of U-12 Athlete</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Admission Section -->
+    <section id="contact" class="py-24 px-6 md:px-16 bg-white">
+        <div class="container mx-auto">
+            <div class="bg-blue-600 rounded-3xl p-12 md:p-20 text-white flex flex-col md:flex-row items-center gap-16 shadow-2xl overflow-hidden relative">
+                <!-- Abstract Design Elements -->
+                <div class="absolute top-0 right-0 w-64 h-64 bg-white/5 rounded-full -translate-y-1/2 translate-x-1/2"></div>
+                <div class="absolute bottom-0 left-0 w-32 h-32 bg-white/5 rounded-full translate-y-1/2 -translate-x-1/2"></div>
+
+                <div class="md:w-1/2 space-y-8 z-10">
+                    <h2 class="text-5xl font-800 leading-tight">Your Journey to <span class="text-yellow-400 italic">Greatness</span> Starts Here</h2>
+                    <p class="text-blue-100 text-lg">Limited spots available for the Spring season. Fill out the inquiry form and our admissions team will contact you within 24 hours.</p>
+                    <div class="space-y-4">
+                        <div class="flex items-center gap-4">
+                            <div class="w-10 h-10 bg-white/10 rounded-full flex items-center justify-center"><i data-lucide="phone" class="w-5 h-5"></i></div>
+                            <span class="font-bold">+1 (800) SPORTS-AC</span>
+                        </div>
+                        <div class="flex items-center gap-4">
+                            <div class="w-10 h-10 bg-white/10 rounded-full flex items-center justify-center"><i data-lucide="map-pin" class="w-5 h-5"></i></div>
+                            <span class="font-bold">202 Champion Way, Athletes Valley, CA</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="md:w-1/2 w-full bg-white p-10 rounded-2xl shadow-lg z-10">
+                    <form class="space-y-4" onsubmit="event.preventDefault();">
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                            <input type="text" placeholder="Athlete Name" class="w-full bg-slate-50 border-none p-4 text-navy rounded-lg focus:ring-2 focus:ring-blue-400 outline-none text-sm">
+                            <input type="text" placeholder="Athlete Age" class="w-full bg-slate-50 border-none p-4 text-navy rounded-lg focus:ring-2 focus:ring-blue-400 outline-none text-sm">
+                        </div>
+                        <input type="email" placeholder="Parent Email Address" class="w-full bg-slate-50 border-none p-4 text-navy rounded-lg focus:ring-2 focus:ring-blue-400 outline-none text-sm">
+                        <select class="w-full bg-slate-50 border-none p-4 text-navy rounded-lg focus:ring-2 focus:ring-blue-400 outline-none text-sm">
+                            <option>Select Sport of Interest</option>
+                            <option>Football</option>
+                            <option>Basketball</option>
+                            <option>Tennis</option>
+                            <option>Athletics</option>
+                        </select>
+                        <textarea placeholder="Tell us about your sporting background..." rows="3" class="w-full bg-slate-50 border-none p-4 text-navy rounded-lg focus:ring-2 focus:ring-blue-400 outline-none text-sm"></textarea>
+                        <button class="w-full bg-navy text-white py-4 font-800 rounded-lg hover:bg-black transition-all shadow-lg uppercase tracking-widest">Submit Inquiry</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="py-16 px-6 md:px-16 bg-navy text-white">
+        <div class="container mx-auto">
+            <div class="flex flex-col md:flex-row justify-between items-start gap-12 mb-16">
+                <div class="max-w-sm">
+                    <div class="flex items-center gap-2 mb-6">
+                        <div class="bg-blue-600 p-1.5 rounded text-white">
+                            <i data-luci
+                                <!-- Developer Attribution -->
+<div class="mt-12 pt-6 border-t border-white/10 text-center text-xs uppercase tracking-widest text-slate-300">
+    Developed & Maintained by
+    <a href="https://www.leoaxis.com/" target="_blank"
+       class="text-yellow-400 font-bold hover:text-white transition-colors">
+        www.leoaxis.com
+    </a>
+</div>
